@@ -3,6 +3,7 @@ import streamlit as st
 from io import BytesIO
 
 def speak_polly(text: str):
+    try:
     polly = boto3.client(
         "polly",
         aws_access_key_id=st.secrets["AWS_ACCESS_KEY_ID"],
@@ -18,3 +19,7 @@ def speak_polly(text: str):
 
     audio_bytes = response["AudioStream"].read()
     st.audio(BytesIO(audio_bytes), format="audio/mp3")
+except NoCredentialsError:
+        st.error("⚠️ AWS credentials not found. Check your Streamlit secrets.")
+except ClientError as e:
+        st.error(f"❌ AWS Polly error: {e.response['Error']['Message']}")
