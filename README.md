@@ -53,10 +53,12 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
 3. **Insight Generation (Planned Integration)**  
    The next version of the agent will integrate **Amazon Bedrock** to transform structured match data into narrative coaching feedback.The LLM will interpret the curated features above and generate insights written in Miss Fortune’s tone—teaching players how to adjust their play to hit key milestones faster and die less before major power spikes. While this stage is not yet live, the backend is fully prepared for seamless integration once deployed.
 
-4. **Voice & Presentation Layer (Implemented)**  
+Note: Miss Fortune’s feedback is currently curated to reflect her tone and champion-specific coaching logic. The backend is ready for future Amazon Bedrock integration to make this fully dynamic.
+
+5. **Voice & Presentation Layer (Implemented)**  
    Current feedback is output through **Amazon Polly**, which converts the textual advice into Miss Fortune’s stylized voice.This transforms the data-driven analysis into an immersive coaching experience, letting players hear advice directly from the champion herself.
 
-5. **Deployment & Delivery**  
+6. **Deployment & Delivery**  
    The **FastAPI** backend runs on **AWS Lambda** and is exposed publicly via **Amazon API Gateway**. This serverless architecture ensures scalability, low latency, and minimal maintenance while providing a smooth public endpoint for demonstrations and player interaction.
 
 ---
