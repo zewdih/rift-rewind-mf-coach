@@ -1,0 +1,10 @@
+#File that ensures key stays private
+.venv/
+.aws-sam/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.pem
+*.key

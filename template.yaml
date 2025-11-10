@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Rift Rewind - Miss Fortune Coach (FastAPI on AWS Lambda)
+
+Globals:
+
+
+  Function:
+    Runtime: python3.11
+    Timeout: 30
+    MemorySize: 512
+  Api:
+    EndpointConfiguration: EDGE      # public edge-optimized
+    Cors:
+      AllowMethods: "'GET,POST,PUT,DELETE,OPTIONS'"
+      AllowHeaders: "'*'"
+      AllowOrigin: "'*'"
+
+Resources:
+  MFCoachFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: app/
+      Handler: lambda_handler.handler
+      Environment:
+        Variables:
+          RIOT_API_KEY_PARAM: /rift-rewind/riot-key
+          BEDROCK_MODEL_ID: anthropic.claude-3-haiku-20240307-v1:0
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - Statement:
+            Effect: Allow
+            Action:
+              - ssm:GetParameter
+              - bedrock:InvokeModel
+              - polly:SynthesizeSpeech
+            Resource:
+              - arn:aws:ssm:us-east-1:086564887631:parameter/rift-rewind/riot-key
+              - arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-haiku-20240307-v1:0
+              - arn:aws:polly:us-east-1:*:*
+      Events:
+        ProxyApi:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+
+Outputs:
+  ApiUrl:
+    Description: API Gateway endpoint URL (implicit API, default stage name is Prod)
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+  FunctionName:
+    Description: Lambda function name
+    Value: !Ref MFCoachFunction

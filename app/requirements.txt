@@ -1,0 +1,9 @@
+pydantic
+#This file is like my project’s shopping list 🛒 for Python packages.
+#Running AWS will obtain whats needed for my appliction
+fastapi
+uvicorn
+requests
+python-dotenv
+boto3
+mangum
