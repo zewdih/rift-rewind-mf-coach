@@ -3,6 +3,8 @@ import os
 import streamlit as st
 from io import BytesIO
 from botocore.exceptions import NoCredentialsError, ClientError e
+from frontend.utils import speak_polly
+
 
 def speak_polly(text: str):
     try:
