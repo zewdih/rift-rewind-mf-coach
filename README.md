@@ -87,6 +87,38 @@ The stack is fully **serverless**, minimizing cost and maintenance while scaling
 
 ---
 
+## 🧪 How to Test the Live API  
+
+You can interact with the public AWS endpoint directly.
+
+### ✅ Health Check  
+```bash
+curl https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/ping
+```
+
+**Expected response:**
+```json
+{"status":"ok"}
+```
+
+### 🎯 Coaching Endpoint  
+```bash
+curl -X POST "https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/coach" \
+  -H "Content-Type: application/json" \
+  -d '{"game_name":"Thousand Cuts","tag_line":"NA1"}' #Thousand Cuts is a OTP for MF hence the usage of this summoner name
+```
+
+**Example output:**
+```json
+{
+  "key_takeaways": ["Focus on farming early to hit item spike faster"],
+  "drill_next": ["Practice ult timing around Dragon fights"],
+  "celebration": "Not bad, captain — keep that trigger finger sharp!"
+}
+```
+
+---
+
 ## 🔑 Environment Variables  
 
 This project uses **two `.env` files** to separate Riot and AWS credentials. The first `.env` file should be located in the **root directory**, and the second one should be inside the **`app/` folder**.
@@ -101,24 +133,4 @@ RIOT_REGION=na1
 AWS_ACCESS_KEY_ID=your_aws_access_key_id
 AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 AWS_REGION=us-east-1
-
-## 🧪 How to Test the Live API  
-
-You can interact with the public AWS endpoint directly.
-
----
-
-### ✅ Health Check  
-```bash
-curl https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/ping
-<img width="473" height="459" alt="Screenshot 2025-11-09 at 10 55 20 PM" src="https://github.com/user-attachments/assets/42a372d7-f1a6-4f0f-bda5-2e7e2cebdee9" />
-
----
-## 🧭 License  
-Open source under the [MIT License](https://opensource.org/licenses/MIT).
-
----
-
-
-
 
