@@ -23,7 +23,9 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
 
 - **Live App URL:** [https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/](https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/). Test with `/ping` or `/coach` (see “How to Test” below).
 
-- **Demo Video:** [![Watch the video](https://img.youtube.com/vi/ZqZdOGevAF0/0.jpg)](https://www.youtube.com/watch?v=ZqZdOGevAF0)
+- **Demo Video:**
+
+[![Watch the video](https://img.youtube.com/vi/ZqZdOGevAF0/0.jpg)](https://www.youtube.com/watch?v=ZqZdOGevAF0)
 ---
 
 ## 🧠 Methodology Write-Up  
