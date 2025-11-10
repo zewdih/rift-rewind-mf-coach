@@ -58,6 +58,13 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
 
 ---
 
+### **What I Learned**  
+- Focusing on **champion-specific coaching** leads to more relevant and engaging insights than generic insights.
+- Using **Polly** for voice added immersion and personality to the feedback.  
+- AWS’s serverless stack made deployment fast, secure, and low-cost :D  
+- Limiting Riot API pulls to the top 25 matches kept performance consistent and costs low.  
+---
+
 ### **Approach, Logic, and Observations**
 
 - **Data Sources:** Only the official **Riot Games API** is used. All insights are generated from the summoner’s match history data.  
