@@ -21,7 +21,7 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
 
 ## 🎮 Demo  
 
-- **Live App URL:** [https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/](https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/)  
+- **Live App URL:** [https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/](https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/).Test with `/ping` or `/coach` (see “How to Test” below).
 - **Demo Video:** _Coming soon 
 ---
 
@@ -101,3 +101,27 @@ RIOT_REGION=na1
 AWS_ACCESS_KEY_ID=your_aws_access_key_id
 AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 AWS_REGION=us-east-1
+
+## 🧪 How to Test the Live API  
+
+You can interact with the public AWS endpoint directly.
+
+---
+
+### ✅ Health Check  
+```bash
+curl https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/ping
+<img width="473" height="459" alt="Screenshot 2025-11-09 at 10 55 20 PM" src="https://github.com/user-attachments/assets/42a372d7-f1a6-4f0f-bda5-2e7e2cebdee9" />
+
+---
+## 🧭 License  
+Open source under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## ✨ Credits  
+**Developer:** Zewdi H.  
+**Powered by:** Riot Games × AWS × Amazon Polly  
+**Hackathon:** Rift Rewind 2025
+
+
