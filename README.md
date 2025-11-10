@@ -21,7 +21,7 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
 
 ## 🎮 Demo  
 
-- **Live App URL:** _Coming soon 
+- **Live App URL:** [https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/](https://6xz8842kf7.execute-api.us-east-1.amazonaws.com/Prod/)  
 - **Demo Video:** _Coming soon 
 ---
 
