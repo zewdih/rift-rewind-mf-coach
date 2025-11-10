@@ -14,7 +14,7 @@ Rather than a simple stat tracker, it acts as a coaching persona that deeply und
 
 The system’s logic and phrasing were carefully curated to reflect Miss Fortune’s personality while teaching players how to optimize her strengths and fix common weaknesses.
 
-In the long run, the vision is to grow Rift Rewind into a full network of champion-specific AI mentors, each with its own personality and analytical style.
+In the long run, the vision is to grow FortunaAI into a full network of champion-specific AI mentors, each with its own personality and analytical style.
 For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical junglers, and Thresh Tactician for macro-heavy supports!
 
 ---
