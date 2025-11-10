@@ -39,18 +39,13 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
    The agent’s backend logic focuses on metrics that truly matter for Miss Fortune gameplay, including:
 
    - **CS @ 10 Minutes:**  
-     Since Miss Fortune is an early lane-dominant ADC who spikes quickly with items such as *Eclipse* or *Kraken Slayer*, her creep score at 10 minutes is a vital early indicator of performance.  
-     A low CS@10 signals missed gold opportunities and delays her first item spike, which can completely shift her mid-game power curve.
+     Since Miss Fortune is an early lane-dominant ADC who spikes quickly with items such as *Eclipse* or *Kraken Slayer*, her creep score at 10 minutes is a vital early indicator of performance.A low CS@10 signals missed gold opportunities and delays her first item spike, which can completely shift her mid-game power curve.
 
    - **Deaths Pre-Mythic:**  
-     Every death before completing a mythic item delays that crucial first power spike.  
-     Tracking pre-mythic deaths highlights poor trades, greedy recalls, or spacing mistakes—core issues for mastering Miss Fortune’s laning and positioning.
+     Every death before completing a mythic item delays that crucial first power spike. Tracking pre-mythic deaths highlights poor trades, greedy recalls, or spacing mistakes—core issues for mastering Miss Fortune’s laning and positioning.
 
    - **Dragon Presence:**  
-     Miss Fortune’s ultimate (*Bullet Time*) can decide teamfights at objectives.  
-     Measuring dragon fight participation helps assess a player’s macro awareness, rotation timing, and contribution to team objectives.
-
-   These curated features allow the coach to evaluate not just generic stats, but **the decisions that make or break Miss Fortune’s early-game success.**
+     Miss Fortune’s ultimate (*Bullet Time*) can decide teamfights at objectives. Measuring dragon fight participation helps assess a player’s macro awareness, rotation timing, and contribution to team objectives.These curated features allow the coach to evaluate not just generic stats, but **the decisions that make or break Miss Fortune’s early-game success.**
 
 3. **Insight Generation (Planned Integration)**  
    The next version of the agent will integrate **Amazon Bedrock** to transform structured match data into narrative coaching feedback.The LLM will interpret the curated features above and generate insights written in Miss Fortune’s tone—teaching players how to adjust their play to hit key milestones faster and die less before major power spikes.While this stage is not yet live, the backend is fully prepared for seamless integration once deployed.
