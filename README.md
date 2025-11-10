@@ -32,9 +32,7 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
 **FortunaAI** has been carefully curated and designed to understand Miss Fortune’s playstyle, key metrics, and common pitfalls, offering actionable insights to help players improve their mastery of the champion. We begin by analyzing her key components.
 
 1. **Data Retrieval**  
-   The system uses the **Riot Games API** to collect recent match histories filtered for Miss Fortune games.  
-   To balance performance and cost, the API is intentionally capped at retrieving the **most recent 25 matches** per summoner.  
-   This keeps analysis fast and stable while still providing enough data for consistent, meaningful feedback.
+   The system uses the **Riot Games API** to collect recent match histories filtered for Miss Fortune games. To balance performance and cost, the API is intentionally capped at retrieving the **most recent 25 matches** per summoner. This keeps analysis fast and stable while still providing enough data for consistent, meaningful feedback.
 
 2. **Champion-Specific Analysis Layer**  
    Each match is analyzed in Python to extract Miss Fortune–relevant features that define how well the player is leveraging her lane dominance and early power spikes.  
@@ -55,17 +53,13 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
    These curated features allow the coach to evaluate not just generic stats, but **the decisions that make or break Miss Fortune’s early-game success.**
 
 3. **Insight Generation (Planned Integration)**  
-   The next version of the agent will integrate **Amazon Bedrock** to transform structured match data into narrative coaching feedback.  
-   The LLM will interpret the curated features above and generate insights written in Miss Fortune’s tone—teaching players how to adjust their play to hit key milestones faster and die less before major power spikes.  
-   While this stage is not yet live, the backend is fully prepared for seamless integration once deployed.
+   The next version of the agent will integrate **Amazon Bedrock** to transform structured match data into narrative coaching feedback.The LLM will interpret the curated features above and generate insights written in Miss Fortune’s tone—teaching players how to adjust their play to hit key milestones faster and die less before major power spikes.While this stage is not yet live, the backend is fully prepared for seamless integration once deployed.
 
 4. **Voice & Presentation Layer (Implemented)**  
-   Current feedback is output through **Amazon Polly**, which converts the textual advice into Miss Fortune’s stylized voice.  
-   This transforms the data-driven analysis into an immersive coaching experience, letting players hear advice directly from the champion herself.
+   Current feedback is output through **Amazon Polly**, which converts the textual advice into Miss Fortune’s stylized voice.This transforms the data-driven analysis into an immersive coaching experience, letting players hear advice directly from the champion herself.
 
 5. **Deployment & Delivery**  
-   The **FastAPI** backend runs on **AWS Lambda** and is exposed publicly via **Amazon API Gateway**.  
-   This serverless architecture ensures scalability, low latency, and minimal maintenance while providing a smooth public endpoint for demonstrations and player interaction.
+   The **FastAPI** backend runs on **AWS Lambda** and is exposed publicly via **Amazon API Gateway**.This serverless architecture ensures scalability, low latency, and minimal maintenance while providing a smooth public endpoint for demonstrations and player interaction.
 
 ---
 
