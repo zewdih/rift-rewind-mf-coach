@@ -1,13 +1,19 @@
 import boto3
 import streamlit as st
 from io import BytesIO
+import os  
 
 def speak_polly(text: str):
-    polly = boto3.client("polly")
+    polly = boto3.client(
+        "polly",
+        region_name=os.getenv("AWS_REGION", "us-east-1") 
+    )
+
     response = polly.synthesize_speech(
         Text=text,
         VoiceId="Joanna",
         OutputFormat="mp3"
     )
+
     audio_bytes = response["AudioStream"].read()
     st.audio(BytesIO(audio_bytes), format="audio/mp3")
