@@ -1,9 +1,7 @@
 # 🌹 FortunAI — Miss Fortune Coach  
 
 *Champion-specific AI coaching for League of Legends players*  
-By **Zewdi H.** — Riot × AWS Hackathon 2025 Submission  
-
-**Developer:** ✨ Zewdi H. ✨
+**Developer:** ✨ Zewdi H. ✨ — Riot × AWS Hackathon 2025 Submission  
 
 ---
 
