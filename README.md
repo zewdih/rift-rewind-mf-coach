@@ -48,13 +48,13 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
      Miss Fortune’s ultimate (*Bullet Time*) can decide teamfights at objectives. Measuring dragon fight participation helps assess a player’s macro awareness, rotation timing, and contribution to team objectives.These curated features allow the coach to evaluate not just generic stats, but **the decisions that make or break Miss Fortune’s early-game success.**
 
 3. **Insight Generation (Planned Integration)**  
-   The next version of the agent will integrate **Amazon Bedrock** to transform structured match data into narrative coaching feedback.The LLM will interpret the curated features above and generate insights written in Miss Fortune’s tone—teaching players how to adjust their play to hit key milestones faster and die less before major power spikes.While this stage is not yet live, the backend is fully prepared for seamless integration once deployed.
+   The next version of the agent will integrate **Amazon Bedrock** to transform structured match data into narrative coaching feedback.The LLM will interpret the curated features above and generate insights written in Miss Fortune’s tone—teaching players how to adjust their play to hit key milestones faster and die less before major power spikes. While this stage is not yet live, the backend is fully prepared for seamless integration once deployed.
 
 4. **Voice & Presentation Layer (Implemented)**  
    Current feedback is output through **Amazon Polly**, which converts the textual advice into Miss Fortune’s stylized voice.This transforms the data-driven analysis into an immersive coaching experience, letting players hear advice directly from the champion herself.
 
 5. **Deployment & Delivery**  
-   The **FastAPI** backend runs on **AWS Lambda** and is exposed publicly via **Amazon API Gateway**.This serverless architecture ensures scalability, low latency, and minimal maintenance while providing a smooth public endpoint for demonstrations and player interaction.
+   The **FastAPI** backend runs on **AWS Lambda** and is exposed publicly via **Amazon API Gateway**. This serverless architecture ensures scalability, low latency, and minimal maintenance while providing a smooth public endpoint for demonstrations and player interaction.
 
 ---
 
@@ -74,7 +74,6 @@ For example, Lux Librarian for support mages, Lee Sin Sensei for mechanical jung
 | **Amazon Polly** | Converts Miss Fortune’s coaching text into lifelike speech. |
 | **AWS Lambda** | Executes the FastAPI backend and coordinates Riot API + Polly calls. |
 | **Amazon API Gateway** | Public HTTPS endpoint for user requests. |
-| **Amazon S3** | (Optional) Cache and store generated audio files. |
 | **Amazon Bedrock (Planned)** | Future integration for LLM-based coaching insights. |
 
 The stack is fully **serverless**, minimizing cost and maintenance while scaling automatically.  
@@ -83,15 +82,15 @@ The stack is fully **serverless**, minimizing cost and maintenance while scaling
 
 ## 🔑 Environment Variables  
 
-This project uses **two `.env` files** to separate Riot and AWS credentials.  
+This project uses **two `.env` files** to separate Riot and AWS credentials. The first `.env` file should be located in the **root directory**, and the second one should be inside the **`app/` folder**.
 
 ### 1️⃣ Root Directory `.env`
 ```env
 RIOT_API_KEY=your_riot_api_key_here
 RIOT_REGION=na1
 
-### 2️⃣ 'app/.env'
-```env
+
+2️⃣ app/.env
 AWS_ACCESS_KEY_ID=your_aws_access_key_id
 AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 AWS_REGION=us-east-1
