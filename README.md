@@ -3,6 +3,8 @@
 *Champion-specific AI coaching for League of Legends players*  
 By **Zewdi H.** — Riot × AWS Hackathon 2025 Submission  
 
+**Developer:** ✨ Zewdi H. ✨
+
 ---
 
 ## 🚀 Overview  
@@ -119,9 +121,6 @@ Open source under the [MIT License](https://opensource.org/licenses/MIT).
 
 ---
 
-## ✨ Credits  
-**Developer:** Zewdi H.  
-**Powered by:** Riot Games × AWS × Amazon Polly  
-**Hackathon:** Rift Rewind 2025
+
 
 
